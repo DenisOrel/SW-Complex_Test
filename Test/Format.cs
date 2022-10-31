@@ -29,8 +29,6 @@ namespace Test
         {
             Format A4 = new Format();
             A4.name = "A4";
-
-            rr.Add(w);
         }
     }
 }

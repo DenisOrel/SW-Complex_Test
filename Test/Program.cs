@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
+using DBDomein;
 
 namespace Test
 {
@@ -18,7 +19,11 @@ namespace Test
 
         private static void Main(string[] args)
         {
-            swApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
+            Class1 re = new Class1();
+
+            re.SettingsForm();
+
+            //swApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
 
             //string s = @"DXFs\<_FileName_>_<_FeatureName_>_<_ConfName_>_<$CLPRP:Description>.dxf";
 
@@ -36,7 +41,7 @@ namespace Test
 
             //Master();
 
-            Console.ReadKey();
+            // Console.ReadKey();
         }
 
         private static void Master()
