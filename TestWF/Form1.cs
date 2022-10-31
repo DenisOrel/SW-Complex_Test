@@ -13,7 +13,7 @@ namespace TestWF
 {
     public partial class Form1 : Form
     {
-        private Class1 re = new Class1();
+        private DBBuilder re = new DBBuilder();
 
         public Form1()
         {
@@ -24,7 +24,6 @@ namespace TestWF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(re.Text());
         }
     }
 }

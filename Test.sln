@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBDomein", "DBDomein\DBDome
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWF", "TestWF\TestWF.csproj", "{F3F6231E-094E-4064-8530-4D19CEAFBDC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignerLibery", "DesignerLibery\DesignerLibery.csproj", "{74A0DD3D-6CF6-42EA-9F77-1D81D649CB6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F3F6231E-094E-4064-8530-4D19CEAFBDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3F6231E-094E-4064-8530-4D19CEAFBDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3F6231E-094E-4064-8530-4D19CEAFBDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74A0DD3D-6CF6-42EA-9F77-1D81D649CB6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74A0DD3D-6CF6-42EA-9F77-1D81D649CB6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74A0DD3D-6CF6-42EA-9F77-1D81D649CB6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74A0DD3D-6CF6-42EA-9F77-1D81D649CB6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

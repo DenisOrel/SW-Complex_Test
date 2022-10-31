@@ -40,12 +40,13 @@ namespace DBDomein
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.DBNameTextBox = new System.Windows.Forms.TextBox();
+            this.TestConnButton = new System.Windows.Forms.Button();
             this.SettingsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // CloseButton
             // 
-            this.CloseButton.Location = new System.Drawing.Point(713, 415);
+            this.CloseButton.Location = new System.Drawing.Point(257, 173);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(75, 23);
             this.CloseButton.TabIndex = 0;
@@ -55,12 +56,13 @@ namespace DBDomein
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(632, 415);
+            this.SaveButton.Location = new System.Drawing.Point(176, 173);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 2;
             this.SaveButton.Text = "Зберегти";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // SettingsGroupBox
             // 
@@ -74,10 +76,10 @@ namespace DBDomein
             this.SettingsGroupBox.Controls.Add(this.DBNameTextBox);
             this.SettingsGroupBox.Location = new System.Drawing.Point(12, 12);
             this.SettingsGroupBox.Name = "SettingsGroupBox";
-            this.SettingsGroupBox.Size = new System.Drawing.Size(332, 155);
+            this.SettingsGroupBox.Size = new System.Drawing.Size(320, 155);
             this.SettingsGroupBox.TabIndex = 23;
             this.SettingsGroupBox.TabStop = false;
-            this.SettingsGroupBox.Text = "Налаштування підключення";
+            this.SettingsGroupBox.Text = "Параметри";
             // 
             // PassTextBox
             // 
@@ -144,16 +146,27 @@ namespace DBDomein
             this.DBNameTextBox.Size = new System.Drawing.Size(181, 20);
             this.DBNameTextBox.TabIndex = 23;
             // 
+            // TestConnButton
+            // 
+            this.TestConnButton.Location = new System.Drawing.Point(12, 173);
+            this.TestConnButton.Name = "TestConnButton";
+            this.TestConnButton.Size = new System.Drawing.Size(122, 23);
+            this.TestConnButton.TabIndex = 24;
+            this.TestConnButton.Text = "Test connection";
+            this.TestConnButton.UseVisualStyleBackColor = true;
+            this.TestConnButton.Click += new System.EventHandler(this.TestConnButton_Click);
+            // 
             // ConnectionSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(344, 214);
+            this.Controls.Add(this.TestConnButton);
             this.Controls.Add(this.SettingsGroupBox);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CloseButton);
             this.Name = "ConnectionSettings";
-            this.Text = "ConnectionSettings";
+            this.Text = "Налаштування підключення";
             this.SettingsGroupBox.ResumeLayout(false);
             this.SettingsGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -173,5 +186,6 @@ namespace DBDomein
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox DBNameTextBox;
+        private System.Windows.Forms.Button TestConnButton;
     }
 }

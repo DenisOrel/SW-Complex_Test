@@ -7,30 +7,21 @@ using System.Threading.Tasks;
 
 namespace DBDomein
 {
-    public class Class1
+    public class DBBuilder
     {
         /// <summary>
         /// Component for build connection string to data base
         /// </summary>
-        private SqlConnectionStringBuilder SqlConnectionStringBuilder { get; set; }
-
         private ConnectionSettings form;
 
-        public Class1()
+        public DBBuilder()
         {
             form = new ConnectionSettings();
         }
 
         public void SettingsForm()
         {
-            // SqlConnectionStringBuilder = new SqlConnectionStringBuilder();
-
             form.Show();
-        }
-
-        public string Text()
-        {
-            return form.DBName;
         }
     }
 }

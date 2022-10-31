@@ -19,7 +19,7 @@ namespace Test
 
         private static void Main(string[] args)
         {
-            Class1 re = new Class1();
+            DBBuilder re = new DBBuilder();
 
             re.SettingsForm();
 
