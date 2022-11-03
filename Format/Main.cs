@@ -2,49 +2,22 @@
 using SolidWorks.Interop.swconst;
 using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using DBDomein;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Test
+namespace Format
 {
-    internal class Program
+    internal class Main
     {
-        private static SldWorks swApp;
-        private static ModelDoc2 swModel;
-        private static DrawingDoc swDraw;
+        private SldWorks swApp;
+        private ModelDoc2 swModel;
+        private DrawingDoc swDraw;
 
-        private static int errors, warnings;
-        private static double Width, Height;
+        private int errors, warnings;
+        private double Width, Height;
 
-        private static void Main(string[] args)
-        {
-            DBBuilder re = new DBBuilder();
-
-            re.SettingsForm();
-
-            //swApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
-
-            //string s = @"DXFs\<_FileName_>_<_FeatureName_>_<_ConfName_>_<$CLPRP:Description>.dxf";
-
-            //Regex regex = new Regex(@"<[^>]*>");
-            //MatchCollection matches = regex.Matches(s);
-            //if (matches.Count > 0)
-            //{
-            //    foreach (Match match in matches)
-            //        Console.WriteLine(match.Value);
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Совпадений не найдено");
-            //}
-
-            //Master();
-
-            // Console.ReadKey();
-        }
-
-        private static void Master()
+        private void Master()
         {
             Height = 0.297; //297×420
             Width = 0.420;
