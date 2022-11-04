@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Format
+namespace SWmech.PropSheet
 {
-    public partial class PropSheet : Form
+    public partial class PropSheetForm : Form
     {
-        public PropSheet()
+        public PropSheetForm()
         {
             InitializeComponent();
         }

@@ -8,22 +8,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBDomein;
+using SWmech.PropSheet;
 
 namespace TestWF
 {
     public partial class Form1 : Form
     {
         private DBBuilder re = new DBBuilder();
+        private PropSheetForm PropSheetForm = new PropSheetForm();
 
         public Form1()
         {
             InitializeComponent();
-
-            re.SettingsForm();
+            PropSheetForm.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // MessageBox.Show(form.Orientation.ToString());
         }
     }
 }

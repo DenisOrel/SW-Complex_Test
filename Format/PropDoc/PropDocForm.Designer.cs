@@ -1,5 +1,5 @@
 ﻿
-namespace Format
+namespace SWmech
 {
     partial class PropDocForm
     {

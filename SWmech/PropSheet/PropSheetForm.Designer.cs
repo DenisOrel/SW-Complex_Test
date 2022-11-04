@@ -1,7 +1,7 @@
 ﻿
-namespace Format
+namespace SWmech.PropSheet
 {
-    partial class PropSheet
+    partial class PropSheetForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,15 +32,15 @@ namespace Format
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.FormatComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.OkButton = new System.Windows.Forms.Button();
+            this.FormatsComboBox = new System.Windows.Forms.ComboBox();
+            this.WidthTextBox = new System.Windows.Forms.TextBox();
+            this.HeightTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.VerticalRadioButton = new System.Windows.Forms.RadioButton();
+            this.HorizontalRadioButton = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -79,52 +79,58 @@ namespace Format
             this.label4.TabIndex = 3;
             this.label4.Text = "Висота:";
             // 
-            // button1
+            // CloseButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(209, 154);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 24);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Скасувати";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CloseButton.Location = new System.Drawing.Point(209, 154);
+            this.CloseButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 24);
+            this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "Скасувати";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // button2
+            // OkButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(209, 124);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 24);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Ок";
-            this.button2.UseVisualStyleBackColor = true;
+            this.OkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.OkButton.Location = new System.Drawing.Point(209, 124);
+            this.OkButton.Margin = new System.Windows.Forms.Padding(2);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(75, 24);
+            this.OkButton.TabIndex = 5;
+            this.OkButton.Text = "Ок";
+            this.OkButton.UseVisualStyleBackColor = true;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
-            // FormatComboBox
+            // FormatsComboBox
             // 
-            this.FormatComboBox.FormattingEnabled = true;
-            this.FormatComboBox.Location = new System.Drawing.Point(82, 7);
-            this.FormatComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FormatComboBox.Name = "FormatComboBox";
-            this.FormatComboBox.Size = new System.Drawing.Size(92, 21);
-            this.FormatComboBox.TabIndex = 7;
+            this.FormatsComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FormatsComboBox.FormattingEnabled = true;
+            this.FormatsComboBox.Location = new System.Drawing.Point(82, 7);
+            this.FormatsComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.FormatsComboBox.Name = "FormatsComboBox";
+            this.FormatsComboBox.Size = new System.Drawing.Size(92, 21);
+            this.FormatsComboBox.TabIndex = 7;
+            this.FormatsComboBox.SelectedValueChanged += new System.EventHandler(this.FormatsComboBox_SelectedValueChanged);
             // 
-            // textBox1
+            // WidthTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 56);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(92, 20);
-            this.textBox1.TabIndex = 8;
+            this.WidthTextBox.Location = new System.Drawing.Point(82, 56);
+            this.WidthTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.WidthTextBox.Name = "WidthTextBox";
+            this.WidthTextBox.ReadOnly = true;
+            this.WidthTextBox.Size = new System.Drawing.Size(92, 20);
+            this.WidthTextBox.TabIndex = 8;
             // 
-            // textBox2
+            // HeightTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 79);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(92, 20);
-            this.textBox2.TabIndex = 9;
+            this.HeightTextBox.Location = new System.Drawing.Point(82, 79);
+            this.HeightTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.ReadOnly = true;
+            this.HeightTextBox.Size = new System.Drawing.Size(92, 20);
+            this.HeightTextBox.TabIndex = 9;
             // 
             // label5
             // 
@@ -139,46 +145,46 @@ namespace Format
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.VerticalRadioButton);
+            this.groupBox1.Controls.Add(this.HorizontalRadioButton);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 110);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(162, 67);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Оріентація";
             // 
-            // radioButton2
+            // VerticalRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(4, 41);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(102, 19);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Вертикальна";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.VerticalRadioButton.AutoSize = true;
+            this.VerticalRadioButton.Location = new System.Drawing.Point(4, 41);
+            this.VerticalRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.VerticalRadioButton.Name = "VerticalRadioButton";
+            this.VerticalRadioButton.Size = new System.Drawing.Size(102, 19);
+            this.VerticalRadioButton.TabIndex = 1;
+            this.VerticalRadioButton.TabStop = true;
+            this.VerticalRadioButton.Text = "Вертикальна";
+            this.VerticalRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // HorizontalRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(4, 19);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(115, 19);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Горизонтальна";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.HorizontalRadioButton.AutoSize = true;
+            this.HorizontalRadioButton.Location = new System.Drawing.Point(4, 19);
+            this.HorizontalRadioButton.Margin = new System.Windows.Forms.Padding(2);
+            this.HorizontalRadioButton.Name = "HorizontalRadioButton";
+            this.HorizontalRadioButton.Size = new System.Drawing.Size(115, 19);
+            this.HorizontalRadioButton.TabIndex = 0;
+            this.HorizontalRadioButton.TabStop = true;
+            this.HorizontalRadioButton.Text = "Горизонтальна";
+            this.HorizontalRadioButton.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(82, 32);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(91, 20);
             this.numericUpDown1.TabIndex = 13;
@@ -192,15 +198,15 @@ namespace Format
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.FormatComboBox);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.HeightTextBox);
+            this.Controls.Add(this.WidthTextBox);
+            this.Controls.Add(this.FormatsComboBox);
+            this.Controls.Add(this.OkButton);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PropSheet";
@@ -212,22 +218,21 @@ namespace Format
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox FormatComboBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.ComboBox FormatsComboBox;
+        private System.Windows.Forms.TextBox WidthTextBox;
+        private System.Windows.Forms.TextBox HeightTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton VerticalRadioButton;
+        private System.Windows.Forms.RadioButton HorizontalRadioButton;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

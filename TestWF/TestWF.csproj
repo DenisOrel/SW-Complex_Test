@@ -84,6 +84,10 @@
       <Project>{c5670e18-d259-4566-8189-b8c47facb8a6}</Project>
       <Name>DBDomein</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SWmech\SWmech.csproj">
+      <Project>{1b04083c-141e-4484-aa2d-0311a44ae08e}</Project>
+      <Name>SWmech</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
