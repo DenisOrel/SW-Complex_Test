@@ -13,17 +13,41 @@ namespace SWmech.PropSheet
 
             //FormatsComboBox.DataSource = format.FormatsList().Select(x => x.Name).ToList();
             FormatsComboBox.DataSource = format.FormatsList();
-            FormatsComboBox.DisplayMember = "Name";
+            FormatsComboBox.DisplayMember = "FormatName";
+
+            MultiplicityComboBox.DataSource = format.Multiplicity;
+
             HorizontalRadioButton.Checked = true;
+            //HeightTextBox.ReadOnly = true;
+            //WidthTextBox.ReadOnly = true;
         }
 
         private void FormatsComboBox_SelectedValueChanged(object sender, EventArgs e)
         {
             format = (Format)FormatsComboBox.SelectedItem;
+            MultiplicityComboBox.DataSource = format.Multiplicity;
 
-            HeightTextBox.Text = format.Height.ToString();
-            WidthTextBox.Text = format.Width.ToString();
-            format.Orientation = true;
+            if (HorizontalRadioButton.Checked)
+            {
+                HeightTextBox.Text = (format.Width * 1000).ToString();
+                WidthTextBox.Text = (format.Height * 1000).ToString();
+            }
+            else
+            {
+                HeightTextBox.Text = (format.Height * 1000).ToString();
+                WidthTextBox.Text = (format.Width * 1000).ToString();
+            }
+
+            if (format.FormatName == "Інший")
+            {
+                HeightTextBox.ReadOnly = false;
+                WidthTextBox.ReadOnly = false;
+            }
+            else
+            {
+                HeightTextBox.ReadOnly = true;
+                WidthTextBox.ReadOnly = true;
+            }
         }
 
         private void CloseButton_Click(object sender, EventArgs e)
@@ -34,6 +58,8 @@ namespace SWmech.PropSheet
         private void OkButton_Click(object sender, EventArgs e)
         {
             PropSheetBuilder builder = new PropSheetBuilder();
+            format.Orientation = HorizontalRadioButton.Checked;
+
             builder.Build(format);
         }
     }

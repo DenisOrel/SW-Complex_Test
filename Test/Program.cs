@@ -13,15 +13,16 @@ namespace Test
         private static SldWorks swApp;
         private static ModelDoc2 swModel;
         private static DrawingDoc swDraw;
-
+        private static SelectionMgr swSelMgr;
+        private static Note swNote;
         private static int errors, warnings;
         private static double Width, Height;
 
         private static void Main(string[] args)
         {
-            DBBuilder re = new DBBuilder();
+            //DBBuilder re = new DBBuilder();
 
-            re.SettingsForm();
+            //re.SettingsForm();
 
             //swApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
 
@@ -39,7 +40,7 @@ namespace Test
             //    Console.WriteLine("Совпадений не найдено");
             //}
 
-            //Master();
+            Master();
 
             // Console.ReadKey();
         }
@@ -48,7 +49,7 @@ namespace Test
         {
             Height = 0.297; //297×420
             Width = 0.420;
-
+            swApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
             string Source2 = @"D:\source\temp\Master\Master_Template_Sheet1.SLDDRW";
 
             swModel = swApp.OpenDoc6(Source2, (int)swDocumentTypes_e.swDocDRAWING, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
@@ -60,14 +61,11 @@ namespace Test
             swDraw.SetupSheet4("Лист1", 12, 13, 1.0, 1.0, true, "", Width, Height, "По умолчанию");
             swDraw.EditTemplate();
 
-            //Устанавливаем размеры листа
-            var swDimension = (Dimension)swModel.Parameter("D1@Эскиз1");
+            swModel.Extension.SelectByID2("Format@Формат листа1", "NOTE", 0, 0, 0, false, 0, null, 0);
+            swSelMgr = (SelectionMgr)swModel.SelectionManager;
+            swNote = swSelMgr.GetSelectedObject6(1, 0) as Note;
 
-            errors = (int)swDimension.SetSystemValue3(Height - 0.01, (int)swSetValueInConfiguration_e.swSetValue_InAllConfigurations, null);
-
-            swDimension = (Dimension)swModel.Parameter("D2@Эскиз1");
-
-            errors = (int)swDimension.SetSystemValue3(Width - 0.025, (int)swSetValueInConfiguration_e.swSetValue_InThisConfiguration, null);
+            swNote.SetText("Формат");
         }
     }
 }

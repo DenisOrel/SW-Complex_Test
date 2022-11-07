@@ -41,9 +41,8 @@ namespace SWmech.PropSheet
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.VerticalRadioButton = new System.Windows.Forms.RadioButton();
             this.HorizontalRadioButton = new System.Windows.Forms.RadioButton();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.MultiplicityComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -181,21 +180,22 @@ namespace SWmech.PropSheet
             this.HorizontalRadioButton.Text = "Горизонтальна";
             this.HorizontalRadioButton.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // MultiplicityComboBox
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(82, 32);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(91, 20);
-            this.numericUpDown1.TabIndex = 13;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.MultiplicityComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MultiplicityComboBox.FormattingEnabled = true;
+            this.MultiplicityComboBox.Location = new System.Drawing.Point(82, 31);
+            this.MultiplicityComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MultiplicityComboBox.Name = "MultiplicityComboBox";
+            this.MultiplicityComboBox.Size = new System.Drawing.Size(92, 21);
+            this.MultiplicityComboBox.TabIndex = 13;
             // 
-            // PropSheet
+            // PropSheetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 188);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.MultiplicityComboBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.HeightTextBox);
@@ -209,15 +209,15 @@ namespace SWmech.PropSheet
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "PropSheet";
+            this.Name = "PropSheetForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Параметри аркуша";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -233,6 +233,6 @@ namespace SWmech.PropSheet
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton VerticalRadioButton;
         private System.Windows.Forms.RadioButton HorizontalRadioButton;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.ComboBox MultiplicityComboBox;
     }
 }
