@@ -42,6 +42,8 @@ namespace SWmech.PropSheet
             this.VerticalRadioButton = new System.Windows.Forms.RadioButton();
             this.HorizontalRadioButton = new System.Windows.Forms.RadioButton();
             this.MultiplicityComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,10 +83,10 @@ namespace SWmech.PropSheet
             // CloseButton
             // 
             this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.Location = new System.Drawing.Point(209, 154);
+            this.CloseButton.Location = new System.Drawing.Point(178, 154);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(2);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(75, 24);
+            this.CloseButton.Size = new System.Drawing.Size(106, 24);
             this.CloseButton.TabIndex = 4;
             this.CloseButton.Text = "Скасувати";
             this.CloseButton.UseVisualStyleBackColor = true;
@@ -93,10 +95,10 @@ namespace SWmech.PropSheet
             // OkButton
             // 
             this.OkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OkButton.Location = new System.Drawing.Point(209, 124);
+            this.OkButton.Location = new System.Drawing.Point(178, 124);
             this.OkButton.Margin = new System.Windows.Forms.Padding(2);
             this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(75, 24);
+            this.OkButton.Size = new System.Drawing.Size(106, 24);
             this.OkButton.TabIndex = 5;
             this.OkButton.Text = "Ок";
             this.OkButton.UseVisualStyleBackColor = true;
@@ -190,11 +192,35 @@ namespace SWmech.PropSheet
             this.MultiplicityComboBox.Size = new System.Drawing.Size(92, 21);
             this.MultiplicityComboBox.TabIndex = 13;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(178, 7);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(106, 24);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Налаштування";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(178, 35);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(106, 64);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Створити основні формати";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // PropSheetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 188);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.MultiplicityComboBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
@@ -234,5 +260,7 @@ namespace SWmech.PropSheet
         private System.Windows.Forms.RadioButton VerticalRadioButton;
         private System.Windows.Forms.RadioButton HorizontalRadioButton;
         private System.Windows.Forms.ComboBox MultiplicityComboBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

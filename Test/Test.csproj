@@ -80,10 +80,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertToPDF.cs" />
-    <Compile Include="Format.cs" />
+    <Compile Include="DXFConverter\SheetMetalOptions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SWPDM.cs" />
+    <Compile Include="DXFConverter\ConvertToDXF.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

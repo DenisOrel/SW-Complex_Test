@@ -29,13 +29,13 @@ namespace SWmech.PropSheet
 
             if (HorizontalRadioButton.Checked)
             {
-                HeightTextBox.Text = (format.Width * 1000).ToString();
-                WidthTextBox.Text = (format.Height * 1000).ToString();
+                HeightTextBox.Text = (format.Width * 1000).ToString() + " мм";
+                WidthTextBox.Text = (format.Height * 1000).ToString() + " мм";
             }
             else
             {
-                HeightTextBox.Text = (format.Height * 1000).ToString();
-                WidthTextBox.Text = (format.Width * 1000).ToString();
+                HeightTextBox.Text = (format.Height * 1000).ToString() + " мм";
+                WidthTextBox.Text = (format.Width * 1000).ToString() + " мм";
             }
 
             if (format.FormatName == "Інший")

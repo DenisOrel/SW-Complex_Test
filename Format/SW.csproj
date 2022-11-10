@@ -71,5 +71,10 @@
       <DependentUpon>PropSheetForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PropDoc\PropDocForm.resx">
+      <DependentUpon>PropDocForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
