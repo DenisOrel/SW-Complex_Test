@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignLibrary", "DesignLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{4865EBF0-1D3D-421E-BCBA-EE7D61B47682}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Intaller", "Intaller\Intaller.vdproj", "{FD4282AF-2913-4640-AED3-03E7C733ECEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWCore", "SWCore\SWCore.csproj", "{F4FA3BF9-30F8-462E-8297-45F450F156CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,12 @@ Global
 		{4865EBF0-1D3D-421E-BCBA-EE7D61B47682}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4865EBF0-1D3D-421E-BCBA-EE7D61B47682}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4865EBF0-1D3D-421E-BCBA-EE7D61B47682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4282AF-2913-4640-AED3-03E7C733ECEF}.Debug|Any CPU.ActiveCfg = Debug
+		{FD4282AF-2913-4640-AED3-03E7C733ECEF}.Release|Any CPU.ActiveCfg = Release
+		{F4FA3BF9-30F8-462E-8297-45F450F156CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FA3BF9-30F8-462E-8297-45F450F156CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FA3BF9-30F8-462E-8297-45F450F156CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FA3BF9-30F8-462E-8297-45F450F156CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
