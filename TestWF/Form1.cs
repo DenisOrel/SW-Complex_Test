@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DBDomein;
 using SWmech.PropSheet;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace TestWF
 {
@@ -25,7 +26,16 @@ namespace TestWF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // MessageBox.Show(form.Orientation.ToString());
+
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+
+            dialog.IsFolderPicker = true;
+
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                string folder = dialog.FileName;
+                MessageBox.Show(folder);
+            }
         }
     }
 }

@@ -3,7 +3,7 @@ using SolidWorks.Interop.swconst;
 using System;
 using System.Globalization;
 
-namespace Converter
+namespace Converter.DXF
 {
     internal class CutList
     {
@@ -108,7 +108,7 @@ namespace Converter
 
                             string ПлощадьГраничнойРамкиОбщаяПлощадь_без_вырезов;
 
-                            swCustProp.(BoundingBoxAreaBlankRu, true, out valOut, out ПлощадьГраничнойРамкиОбщаяПлощадь_без_вырезов);
+                           swCustProp.Get4(BoundingBoxAreaBlankRu, true, out valOut, out ПлощадьГраничнойРамкиОбщаяПлощадь_без_вырезов);
 
                             if (string.IsNullOrEmpty(ПлощадьГраничнойРамкиОбщаяПлощадь_без_вырезов))
                             {
@@ -190,7 +190,7 @@ namespace Converter
                     }
                     catch (Exception p)
                     {
-                        MessageObserver.Instance.SetMessage($"Failed safe convert {stringNumner} to decemal; exception message: {p.Message}");
+                        //MessageObserver.Instance.SetMessage($"Failed safe convert {stringNumner} to decemal; exception message: {p.Message}");
                         return 0;
                     }
                 }

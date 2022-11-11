@@ -1,12 +1,9 @@
-﻿using SolidWorks.Interop.sldworks;
-using SolidWorks.Interop.swconst;
+﻿using Serilog;
+using SolidWorks.Interop.sldworks;
 using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
-using DBDomein;
+using System.Windows;
 
-namespace Test
+namespace Converter
 {
     internal class Program
     {
@@ -40,32 +37,36 @@ namespace Test
             //    Console.WriteLine("Совпадений не найдено");
             //}
 
-            Master();
+            Loger();
 
-            // Console.ReadKey();
+            Console.ReadKey();
         }
 
-        private static void Master()
+        static void Loger()
         {
-            Height = 0.297; //297×420
-            Width = 0.420;
-            swApp = (SldWorks)Marshal.GetActiveObject("SldWorks.Application");
-            string Source2 = @"D:\source\temp\Master\Master_Template_Sheet1.SLDDRW";
+            Console.WriteLine("Strart log");
+            Log.Logger =  new LoggerConfiguration()
 
-            swModel = swApp.OpenDoc6(Source2, (int)swDocumentTypes_e.swDocDRAWING, (int)swOpenDocOptions_e.swOpenDocOptions_Silent, "", ref errors, ref warnings);
+                .MinimumLevel.Debug()
+                //.WriteTo.File("logs/myapp.txt")
+                .CreateLogger();
 
-            swModel = (ModelDoc2)swApp.ActiveDoc;
-
-            swDraw = (DrawingDoc)swModel;
-            swDraw.ActivateSheet("Лист1");
-            swDraw.SetupSheet4("Лист1", 12, 13, 1.0, 1.0, true, "", Width, Height, "По умолчанию");
-            swDraw.EditTemplate();
-
-            swModel.Extension.SelectByID2("Format@Формат листа1", "NOTE", 0, 0, 0, false, 0, null, 0);
-            swSelMgr = (SelectionMgr)swModel.SelectionManager;
-            swNote = swSelMgr.GetSelectedObject6(1, 0) as Note;
-
-            swNote.SetText("Формат");
+            Log.Information("Hello, world!");
+            Console.WriteLine("Hello");
+            int a = 10, b = 0;
+            try
+            {
+                Log.Debug("Dividing {A} by {B}", a, b);
+                Console.WriteLine(a / b);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Something went wrong");
+            }
+            finally
+            {
+                Log.CloseAndFlush();
+            }
         }
     }
 }

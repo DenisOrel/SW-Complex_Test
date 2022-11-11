@@ -2,7 +2,7 @@
 using SolidWorks.Interop.swconst;
 using System.Runtime.InteropServices;
 
-namespace Test
+namespace Converter.PDF
 {
     internal class ConvertToPDF
     {

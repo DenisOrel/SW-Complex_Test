@@ -1,4 +1,4 @@
-﻿namespace Converter
+﻿namespace Converter.DXF
 {
     internal class DataToExport
     {
