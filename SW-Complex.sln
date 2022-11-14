@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Intaller", "Intaller\Intaller.vdproj", "{FD4282AF-2913-4640-AED3-03E7C733ECEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWCore", "SWCore\SWCore.csproj", "{F4FA3BF9-30F8-462E-8297-45F450F156CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWCoreAddin", "SWCore\SWCoreAddin.csproj", "{F4FA3BF9-30F8-462E-8297-45F450F156CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
